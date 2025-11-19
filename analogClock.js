@@ -1,21 +1,19 @@
-var inc = 1000;
-
-clock();
-
-function clock() {
-  const date = new Date();
-
-  const hours = ((date.getHours() + 11) % 12 + 1);
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
+//analog clock with second, minutes and hours
+ 
+function updateClockHands() {
+  const now = new Date();  //
+  const seconds = now.getSeconds();
+  const minutes = now.getMinutes();
+  const hours = now.getHours() % 12;
   
-  const hour = hours * 30;
-  const minute = minutes * 6;
-  const second = seconds * 6;
+  const secondDegrees = (seconds / 60) * 360;
+  const minuteDegrees = (minutes / 60) * 360 + (seconds / 60) * 6;
+  const hourDegrees = (hours / 12) * 360 + (minutes / 60) * 30;
   
-  document.querySelector('.hour').style.transform = `rotate(${hour}deg)`
-  document.querySelector('.minute').style.transform = `rotate(${minute}deg)`
-  document.querySelector('.second').style.transform = `rotate(${second}deg)`
+  document.querySelector('.hour-hand').style.transform = `rotate(${hourDegrees}deg)`;
+  document.querySelector('.min-hand').style.transform = `rotate(${minuteDegrees}deg)`;
+  document.querySelector('.second-hand').style.transform = `rotate(${secondDegrees}deg)`;
 }
 
-setInterval(clock, inc);
+updateClockHands();
+setInterval(updateClockHands, 1000);
