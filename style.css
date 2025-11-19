@@ -23,6 +23,23 @@ body {
   transform: rotate(0deg);
 }
 
-.hour   { width: 40px; height: 4px; background: #000; }
-.minute { width: 60px; height: 3px; background: #000; }
-.second { width: 70px; height: 2px; background: red; }
+.hour-hand {
+     width: 40px;
+    height: 4px;
+    background:
+    #000; 
+}
+
+.min-hand{
+    width: 60px;
+    height: 3px;
+    background: 
+    #000; 
+}
+
+.second-hand {
+     width: 70px;
+     height: 2px;
+     background: 
+     red; 
+}

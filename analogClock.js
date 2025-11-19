@@ -1,7 +1,7 @@
 //analog clock with second, minutes and hours
  
 function updateClockHands() {
-  const now = new Date();  //
+  const now = new Date(); 
   const seconds = now.getSeconds();
   const minutes = now.getMinutes();
   const hours = now.getHours() % 12;
