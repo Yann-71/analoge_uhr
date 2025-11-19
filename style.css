@@ -10,7 +10,7 @@ body {
 .clock {
   width: 80vmin;
   height: 80vmin;
-  background-image: url("C:\Users\yannn\zli\Javascript\ziffernblatt.png");
+  background-color:white;
   border-radius: 50%;
   position: relative;
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
